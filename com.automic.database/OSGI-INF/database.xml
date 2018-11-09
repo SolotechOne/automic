@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" configuration-policy="require" deactivate="deactivate" immediate="true">
+   <implementation class="com.automic.database.impl.DatabaseServiceImpl"/>
+ 
+   <property name="user" type="String" value=""/>
+   <property name="password" type="String" value=""/>
+   <property name="jdbcConnectString" type="String" value=""/>
+   <property name="vendor" type="String" value="N"/>
+   <reference bind="setLogger" cardinality="1..1" interface="com.automic.util.logging.api.LogService" name="LogService" policy="static" unbind="unsetLogger"/>
+   <service>
+      <provide interface="com.automic.database.api.DatabaseService"/>
+   </service>
+   
+</scr:component>
+

@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.7
+Created-By: 1.7.0_79-b15 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Bundle-Name: Database access 
+Bundle-SymbolicName: com.automic.database
+Bundle-Version: 1.0.0
+Bundle-Vendor: Automic Software
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Service-Component: OSGI-INF/*.xml
+Import-Package: com.automic.util.logging.api;version="1.0.0",javax.cry
+ pto,javax.crypto.interfaces,javax.crypto.spec,javax.management,javax.
+ naming,javax.net,javax.net.ssl,javax.sql,javax.sql.rowset,javax.sql.r
+ owset.serial,javax.sql.rowset.spi,javax.transaction,javax.transaction
+ .xa,javax.xml.bind,org.ietf.jgss
+Export-Package: com.automic.database.api;version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: com.automic.database
+
