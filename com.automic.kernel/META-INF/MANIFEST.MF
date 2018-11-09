@@ -1,0 +1,28 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.7
+Created-By: 1.7.0_79-b15 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Bundle-Name: Kernel
+Bundle-SymbolicName: com.automic.kernel
+Bundle-Version: 1.0.0
+Bundle-Vendor: Automic Software
+Service-Component: OSGI-INF/*.xml
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: com.automic.database.api;version="1.0.0",com.automic.n
+ etwork.api;version="1.0.0",com.automic.util.logging.api;version="1.0.
+ 0",javax.crypto,javax.crypto.interfaces,javax.crypto.spec,javax.swing
+ ,javax.xml.bind,javax.xml.parsers,javax.xml.stream,javax.xml.stream.e
+ vents,javax.xml.stream.util,javax.xml.transform,javax.xml.transform.d
+ om,javax.xml.transform.sax,javax.xml.transform.stream,org.osgi.framew
+ ork,org.osgi.framework.launch,org.osgi.service.cm,org.osgi.service.co
+ ordinator;version="1.0.2",org.osgi.service.log,org.osgi.util.tracker,
+ org.w3c.dom,org.xml.sax
+Export-Package: com.automic.kernel.api;version="1.0.0";
+  uses:="com.automic.database.api,
+   javax.xml.stream,
+   com.automic.network.api,
+   com.automic.protocol",
+ com.automic.protocol;version="1.0.0";uses:="com.automic.network.api"
+Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: com.automic.kernel
+

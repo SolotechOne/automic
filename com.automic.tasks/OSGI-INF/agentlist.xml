@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+   <implementation class="com.automic.agentlist.AgentListComponent"/>
+   <property name="message" type="String" value="getexecutorlist"/>
+   <reference bind="bindAgentListService" cardinality="1..1" interface="com.automic.persistence.api.AgentListService" name="AgentListService" policy="static" unbind="unbindAgentListService"/>
+   <reference bind="bindRunningAgentList" cardinality="1..1" interface="com.automic.kernel.api.RunningAgentList" name="RunningAgentList" policy="static" unbind="unbindRunningAgentList"/>
+   <reference bind="bindTranslation" cardinality="1..1" interface="com.automic.util.logging.api.Translation" name="Translation" policy="static" unbind="unbindTranslation"/>
+   <service>
+      <provide interface="com.automic.kernel.api.StaxRequestHandler"/>
+   </service>
+   <reference bind="bindTimeZoneService" cardinality="1..1" interface="com.automic.kernel.api.TimeZoneService" name="TimeZoneService" policy="static"/>
+</scr:component>

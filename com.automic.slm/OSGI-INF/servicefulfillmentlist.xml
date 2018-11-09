@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+   <implementation class="com.automic.slm.fulfillmentlist.ServiceFulfillmentListComponent"/>
+   <property name="message" type="String" value="getservicefulfillmentlist"/>
+   <reference bind="bindServiceFulfillmentsListService" cardinality="1..1" interface="com.automic.persistence.api.ServiceFulfillmentList" name="ServiceFulfillmentList" policy="static"/>
+   <service>
+      <provide interface="com.automic.kernel.api.StaxRequestHandler"/>
+   </service>
+   <reference bind="bindTimeZoneService" cardinality="1..1" interface="com.automic.kernel.api.TimeZoneService" name="TimeZoneService" policy="static"/>
+</scr:component>

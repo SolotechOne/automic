@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" deactivate="deactivate" enabled="true" immediate="true">
+	<implementation class="com.automic.kernel.impl.InstanceFinder"/>
+ <service>
+    <provide interface="com.automic.kernel.impl.InstanceFinder"/>
+ </service>
+ <reference bind="bindServer" cardinality="1..1" interface="com.automic.kernel.impl.Server" name="Server" policy="static" unbind="unbindServer"/>
+ <reference bind="bindLogService" cardinality="1..1" interface="com.automic.util.logging.api.LogService" name="LogService" policy="static" unbind="unbindLogService"/>
+ <reference bind="bindNetworkConfig" cardinality="1..1" interface="com.automic.kernel.impl.NetworkConfig" name="NetworkConfig" policy="static" unbind="unbindNetworkConfig"/>
+ <reference bind="bindJWPInstance" cardinality="1..1" interface="com.automic.kernel.impl.JWPInstance" name="JWPInstance" policy="static" unbind="unbindJWPInstance"/>
+ <reference bind="bindDatabaseService" cardinality="1..1" interface="com.automic.database.api.DatabaseService" name="DatabaseService" policy="static" unbind="unbindDatabaseService"/>
+</scr:component>
+

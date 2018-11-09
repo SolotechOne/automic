@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" deactivate="deactivate" enabled="true" immediate="true">
+   <implementation class="com.automic.kernel.impl.ServerProcess"/>
+ 
+   <reference bind="bindLogger" cardinality="1..1" interface="com.automic.util.logging.api.LogService" name="LogService" policy="static" unbind="unbindLogger"/>
+   <reference bind="bindNetworkConnections" cardinality="1..1" interface="com.automic.network.api.NetworkConnections" name="NetworkConnections" policy="static" unbind="unbindNetworkConnections"/>
+   <reference bind="bindServer" cardinality="1..1" interface="com.automic.kernel.impl.Server" name="Server" policy="static" unbind="unbindServer"/>
+   <reference bind="bindJWPInstance" cardinality="1..1" interface="com.automic.kernel.impl.JWPInstance" name="JWPInstance" policy="static" unbind="unbindJWPInstance"/>
+   <reference bind="bindSender" cardinality="1..1" interface="com.automic.kernel.impl.Sender" name="Sender" policy="static" unbind="unbindSender"/>
+   <reference bind="bindBusy" cardinality="1..1" interface="com.automic.kernel.impl.BusyValues" name="BusyValues" policy="static" unbind="unbindBusy"/>
+   <reference bind="bindLogAdmin" cardinality="1..1" interface="com.automic.util.logging.api.LogAdmin" name="LogAdmin" policy="static" unbind="unbindLogAdmin"/>
+   <reference bind="bindNetworkConfig" cardinality="1..1" interface="com.automic.kernel.impl.NetworkConfig" name="NetworkConfig" policy="static" unbind="unbindNetworkConfig"/>
+   <reference bind="bindTimer" cardinality="1..1" interface="com.automic.kernel.impl.InternalTimer" name="Timer" policy="static" unbind="unbindTimer"/>
+   <reference bind="bindDatabaseService" cardinality="1..1" interface="com.automic.database.api.DatabaseService" name="DatabaseService" policy="static" unbind="unbindDatabaseService"/>
+   <reference cardinality="1..1" interface="com.automic.kernel.api.IDGenerator" name="IDGenerator" policy="static"/>
+   <reference bind="bindInstanceFinder" cardinality="1..1" interface="com.automic.kernel.impl.InstanceFinder" name="InstanceFinder" policy="static" unbind="unbindInstanceFinder"/>
+   <reference bind="bindMQSet" cardinality="1..1" interface="com.automic.kernel.impl.MessageQueueSet" name="MessageQueueSet" policy="static" unbind="unbindMQSet"/>
+   <reference bind="bindCoordinatorService" cardinality="1..1" interface="com.automic.kernel.osgi.CoordinatorService" name="CoordinatorService" policy="static" unbind="unbindCoordinatorService"/>
+   
+</scr:component>
+

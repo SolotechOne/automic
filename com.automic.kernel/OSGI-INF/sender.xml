@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" deactivate="deactivate" enabled="true" immediate="true">
+	<implementation class="com.automic.kernel.impl.SenderImpl"/>
+ <reference bind="bindGenerator" cardinality="1..1" interface="com.automic.kernel.api.IDGenerator" name="IDGenerator" policy="static" unbind="unbindGenerator"/>
+ <service>
+    <provide interface="com.automic.kernel.impl.Sender"/>
+    <provide interface="com.automic.kernel.api.MessageSender"/>
+ </service>
+ <reference bind="bindTimezoneCache" cardinality="1..1" interface="com.automic.kernel.impl.TimezoneCache" name="TimezoneCache" policy="static" unbind="unbindTimezoneCache"/>
+ <reference bind="bindLogger" cardinality="1..1" interface="com.automic.util.logging.api.LogService" name="LogService" policy="static" unbind="unbindLogger"/>
+ <reference bind="bindNetworkConnections" cardinality="1..1" interface="com.automic.network.api.NetworkConnections" name="NetworkConnections" policy="static" unbind="unbindNetworkConnections"/>
+ <reference bind="bindUserList" cardinality="1..1" interface="com.automic.kernel.impl.UserList" name="UserList" policy="static" unbind="unbindUserList"/>
+ <reference bind="bindMQRecordFactory" cardinality="1..1" interface="com.automic.kernel.impl.MQRecordFactory" name="MQRecordFactory" policy="static" unbind="unbindMQRecordFactory"/>
+ <reference bind="bindMQSet" cardinality="1..1" interface="com.automic.kernel.impl.MessageQueueSet" name="MessageQueueSet" policy="static" unbind="unbindMQSet"/>
+ <reference bind="bindCoordinator" cardinality="1..1" interface="org.osgi.service.coordinator.Coordinator" name="Coordinator" policy="static"/>
+ <reference bind="bindServer" cardinality="1..1" interface="com.automic.kernel.impl.Server" name="Server" policy="static"/>
+ <reference bind="bindTranslation" cardinality="1..1" interface="com.automic.util.logging.api.Translation" name="Translation" policy="static"/>
+</scr:component>
+

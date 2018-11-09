@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" deactivate="deactivate" enabled="true" immediate="true">
+	<implementation class="com.automic.kernel.impl.TimezoneCacheImpl"/>
+ <service>
+    <provide interface="com.automic.kernel.impl.TimezoneCache"/>
+    <provide interface="com.automic.kernel.api.TimeZoneService"/>
+ </service>
+ <reference bind="bindClientList" cardinality="1..1" interface="com.automic.kernel.impl.ClientList" name="ClientList" policy="static" unbind="unbindClientList"/>
+ <reference bind="bindCoordinator" cardinality="1..1" interface="org.osgi.service.coordinator.Coordinator" name="Coordinator" policy="static"/>
+</scr:component>
+

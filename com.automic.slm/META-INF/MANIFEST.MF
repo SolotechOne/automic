@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.7
+Created-By: 1.7.0_79-b15 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Bundle-Name: Service Level Management
+Bundle-SymbolicName: com.automic.slm
+Bundle-Version: 1.0.0
+Bundle-Vendor: Automic Software
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: com.automic.kernel.api;version="1.0.0",com.automic.net
+ work.api;version="1.0.0",com.automic.persistence.api;version="1.0.0",
+ com.automic.protocol;version="1.0.0",com.automic.util.logging.api;ver
+ sion="1.0.0",javax.xml.parsers,javax.xml.stream,javax.xml.transform,j
+ avax.xml.transform.stax,javax.xml.transform.stream,org.w3c.dom,org.xm
+ l.sax
+Service-Component: OSGI-INF/*.xml
+Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: com.automic.slm
+

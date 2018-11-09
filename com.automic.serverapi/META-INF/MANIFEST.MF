@@ -1,0 +1,15 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.7
+Created-By: 1.7.0_79-b15 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Bundle-Name: Shared API classes
+Bundle-SymbolicName: com.automic.serverapi
+Bundle-Version: 1.0.0
+Bundle-Vendor: Automic Software
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: com.automic.database.api;version="1.0.0",com.automic.k
+ ernel.api;version="1.0.0",javax.xml.bind.annotation,javax.xml.parsers
+ ,org.w3c.dom,org.xml.sax
+Export-Package: com.automic.server.api.data;version="1.0.0"
+Automatic-Module-Name: com.automic.serverapi
+

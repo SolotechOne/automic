@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" immediate="true">
+   <implementation class="com.automic.slm.SlmComponent"/>
+   <service>
+      <provide interface="com.automic.kernel.api.KickHandler"/>
+      <provide interface="com.automic.kernel.api.NatMessageHandler"/>
+   </service>
+   <property name="event" type="String" value="SLO"/>
+   <reference bind="bindSlmService" cardinality="1..1" interface="com.automic.persistence.api.SlmService" name="SlmService" policy="static" unbind="unbindSlmService"/>
+   <reference bind="bindLogService" cardinality="1..1" interface="com.automic.util.logging.api.LogService" name="LogService" policy="static" unbind="unbindLogService"/>
+   <reference bind="bindTimerService" cardinality="1..1" interface="com.automic.kernel.api.TimerService" name="TimerService" policy="static"/>
+   <reference bind="bindMessageSender" cardinality="1..1" interface="com.automic.kernel.api.MessageSender" name="MessageSender" policy="static"/>
+   <reference bind="bindInstanceService" cardinality="1..1" interface="com.automic.kernel.api.InstanceService" name="InstanceService" policy="static"/>
+   <property name="message" type="String" value="TRG_SLM"/>
+   <reference bind="bindTaskStatusResolver" cardinality="1..1" interface="com.automic.persistence.api.TaskStatusResolver" name="TaskStatusResolver" policy="static"/>
+   <reference bind="bindTimeZoneService" cardinality="1..1" interface="com.automic.kernel.api.TimeZoneService" name="TimeZoneService" policy="static"/>
+   <reference bind="bindTranslation" cardinality="1..1" interface="com.automic.util.logging.api.Translation" name="Translation" policy="static"/>
+</scr:component>

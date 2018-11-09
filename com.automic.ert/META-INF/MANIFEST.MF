@@ -1,0 +1,24 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.7
+Created-By: 1.7.0_79-b15 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Bundle-Name: Adaptive ERT Calculation
+Bundle-SymbolicName: com.automic.ert
+Bundle-Version: 1.0.0
+Bundle-Vendor: Automic Software
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Service-Component: OSGI-INF/*.xml
+Import-Package: com.automic.kernel.api;version="1.0.0",com.automic.net
+ work.api;version="1.0.0",com.automic.persistence.api;version="1.0.0",
+ com.automic.protocol;version="1.0.0",com.automic.util.logging.api;ver
+ sion="1.0.0",javax.annotation,javax.naming,javax.xml.parsers,org.xml.
+ sax,org.xml.sax.helpers
+Bundle-ClassPath: .,lib/arpack_combined_all.jar,lib/cognitive-foundry.
+ jar,lib/commons-collections.jar,lib/commons-lang3.jar,lib/commons-mat
+ h3.jar,lib/guava.jar,lib/joda-time.jar,lib/jsr305.jar,lib/logback-cla
+ ssic.jar,lib/logback-core.jar,lib/mtj.jar,lib/netlib-java.jar,lib/por
+ ter-stemmer.jar,lib/slf4j-api.jar,lib/uncommons-maths.jar,lib/watchma
+ ker-framework.jar,lib/xmlpull.jar,lib/xpp3_min.jar,lib/xstream.jar
+Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: com.automic.ert
+

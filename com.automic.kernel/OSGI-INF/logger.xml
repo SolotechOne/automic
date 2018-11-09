@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" deactivate="deactivate" enabled="true" immediate="true">
+	<implementation class="com.automic.kernel.osgi.LogBridgeComponent"/>
+ 	<reference bind="setLogger" cardinality="1..1" interface="com.automic.util.logging.api.LogService" name="LogService" policy="static" unbind="unsetLogger"/>
+	<reference bind="setReader" cardinality="1..1" interface="org.osgi.service.log.LogReaderService" name="LogReaderService" policy="static" unbind="unsetReader"/>
+</scr:component>
+

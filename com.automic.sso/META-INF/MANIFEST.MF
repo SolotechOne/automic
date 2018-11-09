@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.9.7
+Created-By: 1.7.0_79-b15 (Oracle Corporation)
+Bundle-ManifestVersion: 2
+Bundle-Name: Kerberos SSO
+Bundle-SymbolicName: com.automic.sso
+Bundle-Version: 1.0.0
+Bundle-Vendor: Automic Software
+Service-Component: OSGI-INF/*.xml
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Import-Package: com.automic.kernel.api;version="1.0.0",com.automic.net
+ work.api;version="1.0.0",com.automic.protocol;version="1.0.0",com.aut
+ omic.util.logging.api;version="1.0.0",javax.crypto,javax.security.aut
+ h,javax.security.auth.login,org.ietf.jgss
+Bundle-ActivationPolicy: lazy
+Automatic-Module-Name: com.automic.sso
+

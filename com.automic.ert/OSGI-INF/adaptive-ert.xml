@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" deactivate="deactivate" immediate="true">
+   <implementation class="com.automic.ert.ERTMessageHandler"/>
+   <reference bind="setLogger" cardinality="1..1" interface="com.automic.util.logging.api.LogService" name="LogService" policy="static" unbind="unsetLogger"/>
+   <service>
+      <provide interface="com.automic.kernel.api.NatMessageHandler"/>
+      <provide interface="com.automic.kernel.api.KickHandler"/>
+   </service>
+   <property name="message" type="String">CALCERT
+FEEDBACK
+   </property>
+   <property name="event" type="String" value="ERT"/>
+   <reference bind="bindAdaptiveErtCalculation" cardinality="1..1" interface="com.automic.persistence.api.AdaptiveErtCalculation" name="AdaptiveErtCalculation" policy="static"/>
+   <reference bind="bindMessageSender" cardinality="1..1" interface="com.automic.kernel.api.MessageSender" name="MessageSender" policy="static"/>
+</scr:component>

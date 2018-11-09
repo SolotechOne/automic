@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0">
+   <implementation class="com.automic.persistence.impl.AgentListServiceImpl"/>
+   <service>
+      <provide interface="com.automic.persistence.api.AgentListService"/>
+   </service>
+   <reference bind="bindCoordinator" cardinality="1..1" interface="org.osgi.service.coordinator.Coordinator" name="Coordinator" policy="static"/>
+</scr:component>

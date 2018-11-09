@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" deactivate="deactivate" immediate="true">
+   <implementation class="com.automic.network.impl.NetworkConnectionsImpl"/>
+   <reference bind="setLogger" cardinality="1..1" interface="com.automic.util.logging.api.LogService" name="LogService" policy="static" unbind="unsetLogger"/>
+   <service>
+      <provide interface="com.automic.network.api.NetworkConnections"/>
+   </service>
+   <reference bind="setChangeListener" cardinality="0..1" interface="com.automic.network.api.ChangeListener" name="ChangeListener" policy="static" unbind="unsetChangeListener"/>
+   <reference bind="setMessageFilter" cardinality="0..1" interface="com.automic.network.api.MessageFilter" name="MessageFilter" policy="dynamic" unbind="unsetMessageFilter"/>
+</scr:component>
+
