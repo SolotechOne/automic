@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Oracle
+Bundle-SymbolicName: com.automic.database.oracle
+Bundle-Version: 1.0.0.qualifier
+Fragment-Host: com.automic.database;bundle-version="1.0.0"
+Automatic-Module-Name: com.automic.database.oracle
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ClassPath: lib/ojdbc7.jar
