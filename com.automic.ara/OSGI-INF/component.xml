@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scr:component xmlns:scr="http://www.osgi.org/xmlns/scr/v1.1.0" activate="activate" deactivate="deactivate" immediate="true">
+   <implementation class="com.automic.ara.ARAMessageHandler"/>
+   <property name="message" type="String" value="CHECKDM"/>
+   <reference bind="setLogger" cardinality="1..1" interface="com.automic.util.logging.api.LogService" name="LogService" policy="static" unbind="unsetLogger"/>
+   <service>
+      <provide interface="com.automic.kernel.api.NatMessageHandler"/>
+   </service>
+</scr:component>
