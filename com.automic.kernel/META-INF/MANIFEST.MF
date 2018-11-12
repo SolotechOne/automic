@@ -17,12 +17,8 @@ Import-Package: com.automic.database.api;version="1.0.0",com.automic.n
  ork,org.osgi.framework.launch,org.osgi.service.cm,org.osgi.service.co
  ordinator;version="1.0.2",org.osgi.service.log,org.osgi.util.tracker,
  org.w3c.dom,org.xml.sax
-Export-Package: com.automic.kernel.api;version="1.0.0";
-  uses:="com.automic.database.api,
-   javax.xml.stream,
-   com.automic.network.api,
-   com.automic.protocol",
- com.automic.protocol;version="1.0.0";uses:="com.automic.network.api"
+Export-Package: com.automic.kernel.api;version="1.0.0",com.automic.pro
+ tocol;version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Automatic-Module-Name: com.automic.kernel
 
